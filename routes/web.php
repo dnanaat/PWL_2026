@@ -18,6 +18,9 @@ Route::get('/about', AboutController::class);
 
 Route::get('/articles/{id}', ArticleController::class);
 
+Route::get('/greeting', [WelcomeController::class, 
+'greeting']);
+
 Route::resource('photos', PhotoController::class)->only([ 
 'index', 'show'
 ]); 
